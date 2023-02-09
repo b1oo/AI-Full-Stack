@@ -1,14 +1,12 @@
-""" In this example, the madlib function takes a verb, adjective, and noun as inputs and returns a sentence with the inputs filled in. The get_word function prompts the user to enter a word, and the madlib function uses the words entered by the user to create a sentence. The sentence is then displayed to the user.
-"""
+"""In this example, the get_word function is used to prompt the user to enter a word, which is then stored in a variable. The Mad Lib is created using string concatenation to combine the words entered by the user into a sentence, which is then stored in the mad_lib variable. Finally, the Mad Lib is printed to the screen."""
+
 def get_word(prompt):
     return input(prompt)
 
-def madlib(verb, adjective, noun):
-    return "Do you %s your %s %s?" % (verb, adjective, noun)
-
-print("Welcome to the Mad Lib game!")
 verb = get_word("Enter a verb: ")
 adjective = get_word("Enter an adjective: ")
 noun = get_word("Enter a noun: ")
 
-print(madlib(verb, adjective, noun))
+mad_lib = "Do you " + verb + " your " + adjective + " " + noun + "?"
+
+print(mad_lib)
