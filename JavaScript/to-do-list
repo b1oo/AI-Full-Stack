@@ -1,0 +1,26 @@
+// Here's an example of a simple to-do list implemented in JavaScript
+
+const toDoForm = document.getElementById("toDoForm");
+const toDoInput = document.getElementById("toDoInput");
+const toDoList = document.getElementById("toDoList");
+
+toDoForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const toDo = toDoInput.value;
+  if (!toDo) {
+    return;
+  }
+  const newToDo = document.createElement("li");
+  newToDo.innerHTML = toDo;
+  toDoList.appendChild(newToDo);
+  toDoInput.value = "";
+});
+
+
+// heres the html
+
+// <form id="toDoForm">
+//  <input type="text" id="toDoInput">
+//  <button type="submit">Add</button>
+//</form>
+//<ul id="toDoList"></ul>
